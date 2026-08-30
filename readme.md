@@ -24,8 +24,8 @@ O `index.html` carrega apenas `styles/index.css`, que por sua vez importa `globa
 
 ```css
 /* styles/index.css */
-@import url("/style/global.css");
-@import url("/style/styles.css");
+@import url("./styles.css");
+@import url("./global.css");
 ```
 
 **Por que separar assim:**

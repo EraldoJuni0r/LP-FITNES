@@ -5,5 +5,5 @@
    estilos específicos das seções.
    ========================================================= */
 
-@import url("/styles/style/styles.css");
-@import url("/styles/style/global.css");
+@import url("./styles.css");
+@import url("./global.css");
