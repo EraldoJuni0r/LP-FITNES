@@ -1,0 +1,9 @@
+/* =========================================================
+   INDEX.CSS
+   Ponto de entrada único para o CSS da página.
+   Importa, nesta ordem: tokens/reset globais e depois os
+   estilos específicos das seções.
+   ========================================================= */
+
+@import url("/style/global.css");
+@import url("/style/styles.css");

@@ -1,0 +1,79 @@
+/* =========================================================
+   GLOBAL.CSS
+   Reset, tokens (cores/tipos), base tipográfica e utilitários
+   compartilhados por toda a página.
+   ========================================================= */
+
+:root{
+  --ink:#0d0f0e;
+  --ink-2:#151715;
+  --steel:#242725;
+  --steel-line:#383b38;
+  --bone:#f3efe6;
+  --bone-dim:#c9c5b8;
+  --ember:#0c4e06;
+  --ember-dim:#025019;
+  --concrete:#8b8d86;
+  --radius:2px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--ink);
+  color:var(--bone);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+h1,h2,h3{
+  font-family:'Anton',sans-serif;
+  font-weight:400;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  line-height:0.95;
+}
+
+a{color:inherit;text-decoration:none;}
+
+::selection{background:var(--ember);color:var(--ink);}
+
+/* ---------- utilitários ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.mono{font-family:'IBM Plex Mono',monospace;letter-spacing:0.04em;}
+
+/* ---------- botões (reutilizados em várias seções) ---------- */
+.btn-primary{
+  background:var(--ember);color:var(--ink);padding:16px 30px;font-weight:700;
+  text-transform:uppercase;font-size:14px;letter-spacing:0.04em;border-radius:var(--radius);
+  display:inline-flex;align-items:center;gap:10px;transition:transform .15s,background .2s;
+}
+.btn-primary:hover{background:#0a411b;transform:translateY(-2px);}
+
+.btn-ghost{
+  border:1px solid var(--steel-line);padding:16px 26px;font-weight:600;font-size:14px;
+  text-transform:uppercase;letter-spacing:0.04em;border-radius:var(--radius);
+  transition:border-color .2s, color .2s;
+}
+.btn-ghost:hover{border-color:var(--ember);color:var(--ember);}
+
+/* ---------- reveal (CSS puro, sem JS) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{
+    animation: fade-up 0.8s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+@keyframes fade-up{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+/* fallback para navegadores sem suporte a animation-timeline: garante conteúdo visível */
+@supports not (animation-timeline: view()){
+  .reveal{opacity:1;transform:none;animation:fade-up-once .8s ease both;}
+  @keyframes fade-up-once{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+}
