@@ -74,4 +74,4 @@ Sem JavaScript. As animações de entrada das seções usam `animation-timeline:
 Antes de publicar a página oficialmente, vale confirmar se a documentação da unidade (registro no CREF, alvará sanitário e certificado do Corpo de Bombeiros) está regularizada, já que houve uma interdição reportada pela fiscalização do CREF21/MA e Procon/MA em janeiro de 2026.
 
 
-<img src="/style/assets/i9-fitness-1080x1080.png" alt="#">
+<img src="/styles/style/assets/i9-fitness-1080x1080.png" alt="#">
